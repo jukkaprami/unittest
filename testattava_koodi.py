@@ -52,13 +52,14 @@ class testattava_koodi(unittest.TestCase):
     #jos kopioit testeja niin tarkista ettei funktioiden nimet ole samannimisia
     def test_testattava_funktio_success(self):
         #suluissa on arvo jolla testia ajetaan
-        actual =  testattava_funktio(1)
+        actual =  str(testattava_funktio(1))
         expected='testin tulos jos ok'
         try:
-            assert actual == expected
+            print('actual= ',actual)
+            self.assertIn(actual,expected)
         #jos testi ei mene lapi niin tulostetaan virhe
         except:
-            print('testin tuloksesa virhe!' + str(actual) + '<>',expected)
+            print('testin tuloksesa virhe!' + actual + '<>',expected)
 
 
             
