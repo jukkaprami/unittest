@@ -82,20 +82,20 @@ def datediff2(d1, d2, unit):
     value = round(difference / divider , 1)
     return value
 
-def timediff2(t1, t2, unit):
+def timediff2(startTime, endTime, unit):
     """Calculates the difference between two time values in chosen unit (hour, minute or second)
 
     Args:
-        t1 (str): time value in format hh:mm:ss
-        t2 (str): time value in format hh:mm:ss
-        unit (str): unit to return 
+        startTime (str): time value in format hh:mm:ss
+        endTime (str): time value in format hh:mm:ss
+        unit (str): unit to return (second, minute, hour)
     Returns:
         float: time difference in chosen units
     """
-    t1 = datetime.datetime.strptime(t1, "%H:%M:%S")
-    t2 = datetime.datetime.strptime(t2, "%H:%M:%S")
+    startTime = datetime.datetime.strptime(startTime, "%H:%M:%S")
+    endTime = datetime.datetime.strptime(endTime, "%H:%M:%S")
     units = {'hour': 3600, 'minute': 60, 'second': 1}
-    seconds = abs((t2 - t1).seconds)
+    seconds = abs((endTime - startTime).seconds)
     divider = units[unit] # Choose divider according to unit argument
     value = seconds / divider
     return value
