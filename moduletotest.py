@@ -14,7 +14,7 @@ def yhdeksanhenkea(guess_test):
     guessed_word_correctly = False
 
 def update_clue (guessed_letter, secret_word, clue):
-    """Updates the clue parrerb according to the guess
+    """Updates the clue patter according to the guess
 
     Args:
         guessed_letter (str): letter or word given
