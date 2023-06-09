@@ -8,7 +8,7 @@ def yhdeksanhenkea(guess_test):
     secret_word = random.choice (words)
     # print(secret_word)
 
-    clue = list('????')
+    clue = '????'
 
     heart_symbol = u'\u2764'
     guessed_word_correctly = False
@@ -54,6 +54,5 @@ if __name__ == "__main__":
         #print(guessed_word_correctly)
         if guessed_word_correctly:
             print ('voitit!, salainen sana oli ' + secret_word)
-            break
 
         yhdeksanhenkea()
